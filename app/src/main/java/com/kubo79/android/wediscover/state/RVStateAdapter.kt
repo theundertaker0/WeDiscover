@@ -38,6 +38,13 @@ class RVStateAdapter(private val userList: ArrayList<State>) : RecyclerView.Adap
                var bundle= bundleOf(
                    Pair("id",item.id),
                    Pair("name",item.name),
+                   Pair("description",item.description),
+                   Pair("police",item.police_number),
+                   Pair("firemen",item.firemen_number),
+                   Pair("medical",item.medical_number),
+                   Pair("government",item.government_number),
+                   Pair("biosecurity",item.biosecurity),
+                   Pair("weather",item.weather),
                    Pair("image",item.image)
                )
 

@@ -17,7 +17,7 @@ class RvAdapter(val userList: ArrayList<Faq>) : RecyclerView.Adapter<RvAdapter.V
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
 
         p0.question?.text = userList[p1].question
-        p0.answer?.text = userList[p1].answer.toString()
+        p0.answer?.text = userList[p1].answer
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val question = itemView.findViewById<TextView>(R.id.txtQuestion)

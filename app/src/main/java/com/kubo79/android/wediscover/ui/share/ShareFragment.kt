@@ -1,31 +1,137 @@
 package com.kubo79.android.wediscover.ui.share
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.core.FuelManager
+import com.google.android.gms.maps.*
+import com.google.android.gms.maps.model.LatLng
+import com.kubo79.android.wediscover.ForWebView
 import com.kubo79.android.wediscover.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_share.*
+import org.json.JSONObject
 
-class ShareFragment : Fragment() {
 
-    private lateinit var shareViewModel: ShareViewModel
-
+class ShareFragment : Fragment(),OnMapReadyCallback {
+    private lateinit var mMap: GoogleMap
+    private lateinit var obj:JSONObject
+    private  var idLoc: Int=0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        shareViewModel =
-            ViewModelProviders.of(this).get(ShareViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_share, container, false)
-        val textView: TextView = root.findViewById(R.id.text_share)
-        shareViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
         return root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        val mapFragment=childFragmentManager.findFragmentById(R.id.locationMap) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
+        idLoc=requireArguments().getInt("id")
+        getLocation(idLoc)
+
+
+
+        btnBio.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("biodiversity"))
+            startActivity(intent)
+        }
+
+        btnAmbiental.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("environmental"))
+            startActivity(intent)
+        }
+        btnCultura.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("culture"))
+            startActivity(intent)
+        }
+        btnArqueologia.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("archeology"))
+            startActivity(intent)
+        }
+
+        btnHistoria.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("history"))
+            startActivity(intent)
+        }
+
+        btnEconomia.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("economy"))
+            startActivity(intent)
+        }
+
+        btnDesarrollo.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("sustainable_development"))
+            startActivity(intent)
+        }
+
+        btnDemografia.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("demography"))
+            startActivity(intent)
+        }
+
+        btnGastronomia.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("gastronomy"))
+            startActivity(intent)
+        }
+
+    }
+
+    fun getLocation(id:Int){
+        var datos:String
+
+        FuelManager.instance.basePath = "https://wediscover.herokuapp.com"
+        Fuel.get("/api/v1/locations/$idLoc").responseString { _, _, result ->
+            datos = result.get()
+            obj=JSONObject(datos)
+            Picasso.get().load("https://wediscover.herokuapp.com/images/locations/${obj.getString("image")}").into(imgLocation)
+            txtLocationName.text=obj.getString("name")
+            txtShortDesc.text=obj.getString("short_description")
+            btnBio.isEnabled=obj.getString("biodiversity")!="null"
+            btnAmbiental.isEnabled=obj.getString("environmental")!="null"
+            btnCultura.isEnabled=obj.getString("culture")!="null"
+            btnArqueologia.isEnabled=obj.getString("archeology")!="null"
+            btnHistoria.isEnabled=obj.getString("history")!="null"
+            btnEconomia.isEnabled=obj.getString("economy")!="null"
+            btnDesarrollo.isEnabled=obj.getString("sustainable_development")!="null"
+            btnDemografia.isEnabled=obj.getString("demography")!="null"
+            btnGastronomia.isEnabled=obj.getString("gastronomy")!="null"
+
+        }
+    }
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        mMap = googleMap
+
+        val centroMapa = LatLng(requireArguments().getString("lat").toDouble(),requireArguments().getString("lng").toDouble())
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(centroMapa))
+
     }
 }
