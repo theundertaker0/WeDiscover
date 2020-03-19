@@ -8,17 +8,21 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.FuelManager
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.kubo79.android.wediscover.ForWebView
 import com.kubo79.android.wediscover.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_share.*
+import kotlinx.android.synthetic.main.fragment_share.view.*
 import org.json.JSONObject
 
 
 class ShareFragment : Fragment(),OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
+    lateinit var mapView:MapView
     private lateinit var obj:JSONObject
     private  var idLoc: Int=0
     override fun onCreateView(
@@ -28,14 +32,21 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_share, container, false)
+     mapView= root.locationMap as MapView
+        mapView.onCreate(savedInstanceState)
+        mapView.getMapAsync(this)
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val mapFragment=childFragmentManager.findFragmentById(R.id.locationMap) as? SupportMapFragment
-        mapFragment?.getMapAsync(this)
+
         idLoc=requireArguments().getInt("id")
         getLocation(idLoc)
 
@@ -102,6 +113,12 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
             startActivity(intent)
         }
 
+        btnDescripcion.setOnClickListener {
+            val intent=Intent(context,ForWebView::class.java)
+            intent.putExtra("content",obj.getString("description"))
+            startActivity(intent)
+        }
+
     }
 
     fun getLocation(id:Int){
@@ -123,15 +140,17 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
             btnDesarrollo.isEnabled=obj.getString("sustainable_development")!="null"
             btnDemografia.isEnabled=obj.getString("demography")!="null"
             btnGastronomia.isEnabled=obj.getString("gastronomy")!="null"
+            btnDescripcion.isEnabled=obj.getString("description")!="null"
 
         }
     }
 
-    override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
+   override fun onMapReady(googleMap: GoogleMap) {
+       mMap = googleMap
 
         val centroMapa = LatLng(requireArguments().getString("lat").toDouble(),requireArguments().getString("lng").toDouble())
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(centroMapa))
-
+       mMap.addMarker(
+           MarkerOptions().position(centroMapa).title(requireArguments().getString("name")))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centroMapa,17F))
     }
 }

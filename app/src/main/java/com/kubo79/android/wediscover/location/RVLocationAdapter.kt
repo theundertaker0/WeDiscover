@@ -38,6 +38,8 @@ class RVLocationAdapter(private val userList: ArrayList<Location>) : RecyclerVie
                     Pair("lng",item.lng)
                 )
 
+
+
                 v?.findNavController()?.navigate(R.id.nav_share,bundle)
 
             }
