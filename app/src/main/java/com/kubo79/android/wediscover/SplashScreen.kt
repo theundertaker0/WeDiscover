@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 
 class SplashScreen : AppCompatActivity() {
-    private val SPLASH_TIME_OUT:Long=4000 // 3 sec
+    private val SplashTimeOut:Long=4000 // 3 sec
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
@@ -18,7 +18,7 @@ class SplashScreen : AppCompatActivity() {
 
             // close this activity
             finish()
-        }, SPLASH_TIME_OUT)
+        }, SplashTimeOut)
 
     }
 }

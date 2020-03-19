@@ -2,9 +2,8 @@ package com.kubo79.android.wediscover
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
 import kotlinx.android.synthetic.main.activity_for_web_view.*
-import java.util.*
+
 
 class ForWebView : AppCompatActivity() {
 
