@@ -10,7 +10,8 @@
         android:layout_height="0dp"
         android:layout_weight="40"
         android:id="@+id/imgLocation"
-        android:scaleType="centerCrop"/>
+        android:contentDescription="@string/imagen_localidad"
+        android:scaleType="centerCrop" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,9 +21,7 @@
         android:paddingBottom="@dimen/margen_estandar"
         android:layout_marginBottom="8dp"
         android:paddingEnd="@dimen/margen_estandar"
-        android:paddingRight="@dimen/margen_estandar"
         android:paddingStart="@dimen/margen_izquierda_contenido"
-        android:paddingLeft="@dimen/margen_izquierda_contenido"
         android:paddingTop="@dimen/margen_estandar">
         <TextView
             android:id="@+id/txtLocationName"
@@ -56,7 +55,7 @@
                 android:textStyle="bold"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_marginBottom="8dp"
-                android:text="Ubicación" />
+                android:text="@string/ubicaci_n" />
             <com.google.android.gms.maps.MapView
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
@@ -86,7 +85,7 @@
                 android:textStyle="bold"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_marginBottom="8dp"
-                android:text="Información" />
+                android:text="@string/informaci_n" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

@@ -9,12 +9,14 @@
     card_view:cardPreventCornerOverlap="false"
     android:foreground="?selectableItemBackground"
     android:clickable="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true">
     <ImageView
         android:id="@+id/imgState"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/imagen_estado"
         android:scaleType="centerCrop" />
     <TextView
         android:layout_width="match_parent"

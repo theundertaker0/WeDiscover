@@ -15,5 +15,12 @@
     <string name="menu_share">Localidad</string>
     <string name="menu_send">Preguntas Frecuentes</string>
     <string name="title_activity_maps">Localidades</string>
+    <string name="logo_wediscover">Logo WeDiscover</string>
+    <string name="localidades">Localidades</string>
+    <string name="tel_fonos_de_emergencia">Teléfonos de Emergencia</string>
+    <string name="ubicaci_n">Ubicación</string>
+    <string name="informaci_n">Información</string>
+    <string name="imagen_localidad">Imagen Localidad</string>
+    <string name="imagen_estado">Imagen Estado</string>
 
 </resources>

@@ -22,9 +22,7 @@
         android:orientation="vertical"
         android:paddingBottom="@dimen/margen_estandar"
         android:paddingEnd="@dimen/margen_estandar"
-        android:paddingRight="@dimen/margen_estandar"
         android:paddingStart="@dimen/margen_izquierda_contenido"
-        android:paddingLeft="@dimen/margen_izquierda_contenido"
         android:paddingTop="@dimen/margen_estandar">
 
 
@@ -74,7 +72,7 @@
                 android:textStyle="bold"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_marginBottom="8dp"
-                android:text="Teléfonos de Emergencia" />
+                android:text="@string/tel_fonos_de_emergencia" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -189,7 +187,7 @@
                 android:textStyle="bold"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_marginBottom="8dp"
-                android:text="Localidades" />
+                android:text="@string/localidades" />
 
 
                 <androidx.recyclerview.widget.RecyclerView
