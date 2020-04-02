@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#d2f2f2"
+    android:background="#000000"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/image"
         android:src="@drawable/logowediscovercompleto"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_centerInParent="true"
         android:contentDescription="@string/logo_wediscover" />
 
@@ -19,7 +19,7 @@
         android:layout_below="@id/image"
         android:layout_centerHorizontal="true"
         android:padding="6dp"
-        android:layout_width="45dp"
-        android:layout_height="45dp" />
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
 
 </RelativeLayout>
