@@ -128,7 +128,7 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
         Fuel.get("/api/v1/locations/$idLoc").responseString { _, _, result ->
             datos = result.get()
             obj=JSONObject(datos)
-            Picasso.get().load("https://wediscover.herokuapp.com/images/locations/${obj.getString("image")}").into(imgLocation)
+            Picasso.get().load("https://wediscoverfinal.s3.amazonaws.com/${obj.getString("image")}").into(imgLocation)
             txtLocationName.text=obj.getString("name")
             txtShortDesc.text=obj.getString("short_description")
             btnBio.isEnabled=obj.getString("biodiversity")!="null"

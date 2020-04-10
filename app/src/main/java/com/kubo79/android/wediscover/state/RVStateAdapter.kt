@@ -32,7 +32,7 @@ class RVStateAdapter(private val userList: ArrayList<State>) : RecyclerView.Adap
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
        fun bindItems(item:State){
             itemView.txtName.text=item.name
-           Picasso.get().load("https://wediscover.herokuapp.com/images/states/"+item.image).into(itemView.imgState)
+           Picasso.get().load("https://wediscoverfinal.s3.amazonaws.com/"+item.image).into(itemView.imgState)
            itemView.setOnClickListener {
                v: View? ->
                var bundle= bundleOf(

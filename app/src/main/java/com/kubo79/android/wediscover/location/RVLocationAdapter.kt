@@ -28,7 +28,7 @@ class RVLocationAdapter(private val userList: ArrayList<Location>) : RecyclerVie
         fun bindItems(item:Location){
             itemView.txtName.text=item.name
             itemView.txtShortDesc.text=item.short_description
-            Picasso.get().load("https://wediscover.herokuapp.com/images/locations/"+item.image).into(itemView.imgLocation)
+            Picasso.get().load("https://wediscoverfinal.s3.amazonaws.com/"+item.image).into(itemView.imgLocation)
             itemView.setOnClickListener {
                     v: View? ->
                 var bundle= bundleOf(

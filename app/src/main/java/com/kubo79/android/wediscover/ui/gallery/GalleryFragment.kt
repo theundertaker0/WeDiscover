@@ -77,7 +77,7 @@ class GalleryFragment : Fragment(), PermissionRequest.Listener {
             startActivity(intent)
         }
 
-        Picasso.get().load("https://wediscover.herokuapp.com/images/states/"+arguments?.getString("image")).into(imgState)
+        Picasso.get().load("https://wediscoverfinal.s3.amazonaws.com/"+arguments?.getString("image")).into(imgState)
 
 
         //Llamadas telefónicas
