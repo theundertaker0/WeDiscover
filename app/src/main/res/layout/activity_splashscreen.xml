@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/image"
-        android:src="@drawable/logowediscovercompleto"
+        android:src="@drawable/ic_logowediscovercompleto"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerInParent="true"

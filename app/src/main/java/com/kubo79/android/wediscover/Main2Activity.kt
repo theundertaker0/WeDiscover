@@ -2,6 +2,7 @@ package com.kubo79.android.wediscover
 
 
 
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
@@ -56,3 +57,4 @@ class Main2Activity : AppCompatActivity() {
 
 
 }
+
