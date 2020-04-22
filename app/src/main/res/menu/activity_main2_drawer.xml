@@ -18,5 +18,9 @@
         android:iconTint="@color/white"
         android:title="@string/menu_send" />
 
+    <item
+        android:title="En WeDiscover
+no sólo queremos que visites y explores los diferentes destinos y sus atractivos turísticos, ofrecemos una nueva forma de ver el turismo con base a información científica y descriptiva de los lugares, en donde podrás no sólo conocer sino entender cada sitio, su población, el medio natural, su historia y el contexto de cada localidad dentro de la península de Yucatán"/>
+
 
 </menu>
