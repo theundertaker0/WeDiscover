@@ -12,7 +12,7 @@
     <string name="menu_home">States</string>
     <string name="menu_gallery">State</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
+    <string name="menu_tools">About Us</string>
     <string name="menu_share">Location</string>
     <string name="menu_send">FAQS</string>
     <string name="title_activity_maps">Locations</string>
@@ -23,4 +23,6 @@
     <string name="informaci_n">Information</string>
     <string name="imagen_localidad">Location Image</string>
     <string name="imagen_estado">State image</string>
+    <string name="nosotros">About Us</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2065790873789795/1117328018</string>
 </resources>

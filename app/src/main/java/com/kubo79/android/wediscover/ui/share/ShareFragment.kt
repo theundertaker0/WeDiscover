@@ -32,9 +32,7 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_share, container, false)
-     mapView= root.locationMap as MapView
-        mapView.onCreate(savedInstanceState)
-        mapView.getMapAsync(this)
+
         return root
     }
 
@@ -119,6 +117,7 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
             startActivity(intent)
         }
 
+
     }
 
     fun getLocation(id:Int){
@@ -141,6 +140,9 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
             btnDemografia.isEnabled=obj.getString("demography")!="null"
             btnGastronomia.isEnabled=obj.getString("gastronomy")!="null"
             btnDescripcion.isEnabled=obj.getString("description")!="null"
+            mapView= locationMap as MapView
+            mapView.onCreate(null)
+            mapView.getMapAsync(this)
 
         }
     }
@@ -151,6 +153,7 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
         val centroMapa = LatLng(requireArguments().getString("lat").toDouble(),requireArguments().getString("lng").toDouble())
        mMap.addMarker(
            MarkerOptions().position(centroMapa).title(requireArguments().getString("name")))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centroMapa,17F))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(centroMapa))
+       mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(centroMapa.latitude,centroMapa.longitude),9.0F),1500,null)
     }
 }

@@ -9,12 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.FuelManager
-import com.kubo79.android.wediscover.state.State
+import com.google.android.gms.ads.AdRequest
 import com.kubo79.android.wediscover.R
 import com.kubo79.android.wediscover.state.RVStateAdapter
+import com.kubo79.android.wediscover.state.State
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_send.*
 import org.json.JSONArray
+
 
 class HomeFragment : Fragment() {
 
@@ -32,6 +33,8 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         getStates()
+        val adRequest: AdRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
 
     }
 

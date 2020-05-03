@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "617761325947",
+    "firebase_url": "https://wediscoverapp-8cea6.firebaseio.com",
+    "project_id": "wediscoverapp-8cea6",
+    "storage_bucket": "wediscoverapp-8cea6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617761325947:android:4632ed7fafec7d615c33de",
+        "android_client_info": {
+          "package_name": "com.kubo79.android.wediscover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617761325947-odqal2131h18m3nj5so28e1fc679oavv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVk5TGENLJZceXEhMwhHQOprjzw7MCyTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617761325947-odqal2131h18m3nj5so28e1fc679oavv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

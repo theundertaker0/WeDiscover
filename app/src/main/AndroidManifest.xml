@@ -16,12 +16,16 @@
         android:required="true"/>
 
     <application
+        android:debuggable="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher2"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher2_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2065790873789795~5958591155"/>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
