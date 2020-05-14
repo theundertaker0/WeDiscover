@@ -61,7 +61,8 @@
                 app:fb_textSize="16dp"
                 app:fb_textColor="#FFF"
                 app:fb_backgroundColor="@color/colorPrimary"
-                app:fb_text="Ver Descripción del Estado"/>
+                app:fb_text="Ver Descripción del Estado"
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

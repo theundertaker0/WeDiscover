@@ -77,7 +77,9 @@
                 app:fb_textSize="16dp"
                 app:fb_textColor="#FFF"
                 app:fb_backgroundColor="@color/colorPrimary"
-                app:fb_text="Ver Descripción completa"/>
+                app:fb_text="Ver Descripción completa"
+                android:visibility="gone"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
