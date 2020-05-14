@@ -24,5 +24,10 @@
        android:iconTint="@color/white"
        android:title="@string/nosotros"
        />
+    <item
+        android:id="@+id/nav_slideshow"
+        android:icon="@drawable/ic_spellcheck_black_24dp"
+        android:iconTint="@color/white"
+        android:title="@string/glosario"/>
 
 </menu>

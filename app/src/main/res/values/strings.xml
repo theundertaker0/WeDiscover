@@ -10,7 +10,7 @@
 
     <string name="menu_home">Estados</string>
     <string name="menu_gallery">Estado</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_slideshow">Glosario</string>
     <string name="menu_tools">Nosotros</string>
     <string name="menu_share">Localidad</string>
     <string name="menu_send">Preguntas Frecuentes</string>
@@ -24,5 +24,6 @@
     <string name="imagen_estado">Imagen Estado</string>
     <string name="nosotros">Nosotros</string>
     <string name="banner_ad_unit_id">ca-app-pub-2065790873789795/1117328018</string>
+    <string name="glosario">Glosario</string>
 
 </resources>

@@ -43,7 +43,7 @@ class SendFragment : Fragment() {
             val arreglo = JSONArray(datos)
             var faqs = ArrayList<Faq>()
             if (arreglo.length() == 0) {
-                Toast.makeText(context,"No hay preguntas frecuentes que mostrar",Toast.LENGTH_LONG)
+                Toast.makeText(context,"No hay preguntas frecuentes que mostrar",Toast.LENGTH_LONG).show()
             }
             faqs.clear()
 

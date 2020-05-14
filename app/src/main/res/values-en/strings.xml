@@ -11,7 +11,7 @@
 
     <string name="menu_home">States</string>
     <string name="menu_gallery">State</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_slideshow">Glossary</string>
     <string name="menu_tools">About Us</string>
     <string name="menu_share">Location</string>
     <string name="menu_send">FAQS</string>
@@ -25,4 +25,5 @@
     <string name="imagen_estado">State image</string>
     <string name="nosotros">About Us</string>
     <string name="banner_ad_unit_id">ca-app-pub-2065790873789795/1117328018</string>
+    <string name="glosario">Glosario</string>
 </resources>
