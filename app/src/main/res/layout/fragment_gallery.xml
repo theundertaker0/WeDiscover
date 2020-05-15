@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/grey">
+            android:background="@color/white">
             <com.github.nikartm.button.FitButton
                 android:id="@+id/btnVerDescripcion"
                 android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textStyle="bold"
-                android:textColor="@color/orange"
+                android:textColor="@color/black"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_marginBottom="8dp"
                 android:text="@string/tel_fonos_de_emergencia" />
