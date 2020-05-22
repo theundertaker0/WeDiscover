@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.FuelManager
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
@@ -16,7 +15,6 @@ import com.kubo79.android.wediscover.ForWebView
 import com.kubo79.android.wediscover.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_share.*
-import kotlinx.android.synthetic.main.fragment_share.view.*
 import org.json.JSONObject
 
 
@@ -32,7 +30,9 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_share, container, false)
-
+        mapView = root.findViewById(R.id.locationMap)
+        mapView.onCreate(savedInstanceState)
+        mapView.getMapAsync(this)
         return root
     }
 
@@ -44,7 +44,7 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
+        mapView= locationMap as MapView
         idLoc=requireArguments().getInt("id")
         getLocation(idLoc)
 
@@ -140,9 +140,8 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
             btnDemografia.isEnabled=obj.getString("demography")!="null"
             btnGastronomia.isEnabled=obj.getString("gastronomy")!="null"
             btnDescripcion.isEnabled=obj.getString("description")!="null"
-            mapView= locationMap as MapView
-            mapView.onCreate(null)
-            mapView.getMapAsync(this)
+
+
 
         }
     }
@@ -156,4 +155,29 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(centroMapa))
        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(centroMapa.latitude,centroMapa.longitude),9.0F),1500,null)
     }
+    override fun onResume() {
+        super.onResume()
+        mapView.onResume()
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mapView.onPause()
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mapView.onDestroy()
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        mapView.onLowMemory()
+
+    }
+
+
+
 }
