@@ -4,4 +4,13 @@
     <string name="nosotros">Nosotros</string>
     <string name="banner_ad_unit_id">ca-app-pub-2065790873789795/1117328018</string>
     <string name="glosario">Glosario</string>
+    <string name="atractivos">Atractivos Turísticos</string>
+    <string name="gastronomia">Gastronomía</string>
+    <string name="demografia">Demografía</string>
+    <string name="desarrollo">Desarrollo Sustentable</string>
+    <string name="arqueologia">Arqueología</string>
+    <string name="cultura">Cultura</string>
+    <string name="ambienta">Ambiental</string>
+    <string name="biodiversidad">Biodiversidad</string>
+    <string name="descComp">Ver Descripción completa</string>
 </resources>

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.FuelManager
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.kubo79.android.wediscover.R
 import com.kubo79.android.wediscover.state.RVStateAdapter
 import com.kubo79.android.wediscover.state.State
@@ -33,6 +34,7 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         getStates()
+        MobileAds.initialize(context, "ca-app-pub-2065790873789795~5958591155");
         val adRequest: AdRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 

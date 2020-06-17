@@ -16,6 +16,7 @@ data class Location(
     val sustainable_development:String,
     val demography:String,
     val gastronomy:String,
+    val biblio:String,
     val lat:String,
     val lng:String,
     val ext1: String,
