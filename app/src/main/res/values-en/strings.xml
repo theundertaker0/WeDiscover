@@ -26,4 +26,16 @@
     <string name="nosotros">About Us</string>
     <string name="banner_ad_unit_id">ca-app-pub-2065790873789795/1117328018</string>
     <string name="glosario">Glosario</string>
+    <string name="ver_descripcion_estado">Ver Descripción del Estado</string>
+    <string name="policia">Policía</string>
+    <string name="municipio">Municipio</string>
+    <string name="ver_ubicaciones_en_mapa">Ver Ubicaciones en Mapa</string>
+    <string name="ver_descripcion_completa">Ver Descripción completa</string>
+    <string name="biodiversidad">Biodiversidad</string>
+    <string name="ambiental">Ambiental</string>
+    <string name="cultura">Cultura</string>
+    <string name="arqueologia">Arqueología</string>
+    <string name="historia">Historia</string>
+    <string name="desarrollo_sustentable">Desarrollo Sustentable</string>
+    <string name="demografia">Demografía</string>
 </resources>

@@ -61,7 +61,7 @@
                 app:fb_textSize="16dp"
                 app:fb_textColor="#FFF"
                 app:fb_backgroundColor="@color/colorPrimary"
-                app:fb_text="Ver Descripción del Estado"
+                app:fb_text="@string/ver_descripcion_estado"
                 />
             <View
                 android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                     app:fb_icon="@drawable/ic_phone_black_24dp"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Policía"
+                    app:fb_text="@string/policia"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/txtPolice" />
@@ -107,7 +107,7 @@
                     app:fb_icon="@drawable/ic_phone_black_24dp"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Médico"
+                    app:fb_text="@string/medico"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/txtMedical" />
@@ -122,7 +122,7 @@
                     app:fb_icon="@drawable/ic_phone_black_24dp"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Bomberos"
+                    app:fb_text="@string/bomberos"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/txtFiremen" />
@@ -137,7 +137,7 @@
                     app:fb_icon="@drawable/ic_phone_black_24dp"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Municipio"
+                    app:fb_text="@string/municipio"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/txtGovernment" />
@@ -165,7 +165,7 @@
                     app:fb_textSize="16dp"
                     app:fb_textColor="#FFF"
                     app:fb_backgroundColor="@color/colorPrimary"
-                    app:fb_text="Bioseguridad"/>
+                    app:fb_text="@string/bioseguridad"/>
                 <com.github.nikartm.button.FitButton
                     android:id="@+id/btnVerClima"
                     android:layout_width="0dp"
@@ -181,7 +181,7 @@
                     app:fb_textSize="16dp"
                     app:fb_textColor="#FFF"
                     app:fb_backgroundColor="@color/colorPrimary"
-                    app:fb_text="Clima"/>
+                    app:fb_text="@string/cima"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
@@ -217,7 +217,7 @@
                 app:fb_textSize="16dp"
                 app:fb_textColor="#FFF"
                 app:fb_backgroundColor="@color/colorPrimary"
-                app:fb_text="Ver Ubicaciones en Mapa"/>
+                app:fb_text="@string/ver_ubicaciones_en_mapa"/>
 
 
         </LinearLayout>

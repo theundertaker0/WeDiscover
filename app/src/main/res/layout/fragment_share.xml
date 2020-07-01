@@ -77,7 +77,7 @@
                 app:fb_textSize="16dp"
                 app:fb_textColor="#FFF"
                 app:fb_backgroundColor="@color/colorPrimary"
-                app:fb_text="Ver Descripción completa"
+                app:fb_text="@string/ver_descripcion_completa"
                 android:visibility="gone"
                 />
             <TextView
@@ -105,7 +105,7 @@
                     app:fb_icon="@drawable/biodiversity"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Biodiversidad"
+                    app:fb_text="@string/biodiversidad"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnBio" />
@@ -120,7 +120,7 @@
                     app:fb_icon="@drawable/enviromental"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Ambiental"
+                    app:fb_text="@string/ambiental"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnAmbiental" />
@@ -135,7 +135,7 @@
                     app:fb_icon="@drawable/culture"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Cultura"
+                    app:fb_text="@string/cultura"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnCultura" />
@@ -157,7 +157,7 @@
                     app:fb_icon="@drawable/ic_terrain_black_24dp"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Arqueología"
+                    app:fb_text="@string/arqueologia"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnArqueologia" />
@@ -172,7 +172,7 @@
                     app:fb_icon="@drawable/history"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Historia"
+                    app:fb_text="@string/historia"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnHistoria" />
@@ -187,7 +187,7 @@
                     app:fb_icon="@drawable/economy"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Economía"
+                    app:fb_text="@string/economia"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnEconomia" />
@@ -209,7 +209,7 @@
                     app:fb_icon="@drawable/sustainable"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Desarrollo Sustentable"
+                    app:fb_text="@string/desarrollo_sustentable"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnDesarrollo" />
@@ -224,7 +224,7 @@
                     app:fb_icon="@drawable/demography"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Demografía"
+                    app:fb_text="@string/demografia"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnDemografia" />
@@ -239,7 +239,7 @@
                     app:fb_icon="@drawable/gastronomy"
                     app:fb_iconColor="#FFF"
                     app:fb_iconPosition="top"
-                    app:fb_text="Gastronomía"
+                    app:fb_text="@string/gastronomia"
                     app:fb_textColor="#FFF"
                     android:layout_weight="1"
                     android:id="@+id/btnGastronomia" />
