@@ -164,6 +164,7 @@ class GalleryFragment : Fragment(), PermissionRequest.Listener {
                         "n",
                         "n",
                         "n",
+                        "n",
                         obj.getString("lat"),
                         obj.getString("lng"),
                         "n",
@@ -174,11 +175,11 @@ class GalleryFragment : Fragment(), PermissionRequest.Listener {
                         )
                     )
                 }
+                locationRecyclerView.setHasFixedSize(true)
                 val gridLayoutManager =
                     GridLayoutManager(context, 2)
                 //gridLayoutManager.orientation=LinearLayoutManager.HORIZONTAL
                 locationRecyclerView.layoutManager = gridLayoutManager
-                //locationRecyclerView.hasFixedSize()
                 locationRecyclerView.adapter = RVLocationAdapter(locations)
             }
 

@@ -117,6 +117,13 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
             startActivity(intent)
         }
 
+        btnAtractivos.setOnClickListener{
+
+            val intent= Intent(context, ForWebView::class.java)
+            intent.putExtra("content",obj.getString("biblio"))
+            startActivity(intent)
+        }
+
 
     }
 
@@ -140,6 +147,7 @@ class ShareFragment : Fragment(),OnMapReadyCallback {
             btnDemografia.isEnabled=obj.getString("demography")!="null"
             btnGastronomia.isEnabled=obj.getString("gastronomy")!="null"
             btnDescripcion.isEnabled=obj.getString("description")!="null"
+            btnAtractivos.isEnabled=obj.getString("biblio")!="null"
 
 
 
